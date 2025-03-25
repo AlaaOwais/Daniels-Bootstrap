@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="./webfont/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
-    <header class="home vh-100 d-flex flex-column justify-content-center align-items-center ">
-        
-        <nav class="navbar navbar-expand-lg fixed-top pt-4  ">
+<body data-bs-spy="scroll" data-bs-target="#nav"  data-bs-smooth-scroll="true" class="scrollspy-example" >
+    <header class="home  vh-100 d-flex flex-column justify-content-center align-items-center ">
+        <nav id="nav" class="default navbar navbar-expand-md fixed-top  ">
                 <div class="container px-5">
                     <a class="navbar-brand fw-bold" href="#">Daniels</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,27 +22,28 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services">Services</a>
+                            <a class="nav-link" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="work">Works</a>
+                            <a class="nav-link" href="#work">Works</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="clients">Clients</a>
+                            <a class="nav-link" href="#clients">Clients</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team">Teams</a>
+                            <a class="nav-link" href="#team">Teams</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact">Contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                         </ul>
                     </div>
                 </div>
-            </nav>
+        </nav>
+        
             <div class="home-contant d-flex flex-column justify-content-center align-items-center mt-4">
                 <h3 class="fw-bold display-5">Hello</h3>
                 <h2 class="fw-light display-3">I Am <span class="anotation"></span></h2>
@@ -56,12 +56,51 @@
                         <li class="rounded-circle "><a class="text-white" href="#"><i class="fa-brands fa-square-youtube"></i></a></li>
                     </ul>
                 </div>
-            
             </div>
     </header>
     <main>
-        <section class="about">
-            
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-md-5">
+                        <div class="inner-about">
+                            <div class="about-img position-relative">
+                                <img class="w-100" src="./images/imgs/hero.jpg" alt="">
+                            <div class="dots">
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="about-contant col-md-7">
+                        <div class="title">
+                            <h3 class="dot fs-3 mb-0 pb-0">About me</h3>
+                            <p class="text-secondary fw-light">UI / UX Designer & Web Developer</p>
+                        </div>
+                        <p class="text-secondary">
+                            I am <span class="fw-bold">Jerry Daniels</span>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever It has survived not only five centuries, but also the leap into electronic but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                        </p>
+                        <div class="prcentage d-flex flex-column gap-3">
+                            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 95%">
+                                    <span class="precent-text">web Design</span><span class="prec-about">95%</span> </div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                
+                                <div class="progress-bar" style="width: 80%"><span class="precent-text">Branding</span><span class="prec-about">80%</span></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                
+                                <div class="progress-bar " style="width: 90%"><span class="precent-text">Development</span><span class="prec-about">90%</span></div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn-contact"> Download C.V</button>
+                            <button class="btn-contact contact-me-btn">Contact Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="services" class="services ">
             <header>
@@ -69,7 +108,7 @@
                     <h3 class="dot-border mx-auto dot text-center ">Services</h3>
                 </div>
             </header>
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row gy-4" >
                     <div class="col-lg-4 ">
                         <div class="inner-service bg-white text-center p-5 px-4 shadow-sm d-flex flex-column gap-2 ">
@@ -381,7 +420,7 @@
                     </div>
             </div>
         </section>
-        <section id="client" class="clients">
+        <section id="clients" class="clients">
             <header>
                 <div class="title ">
                     <h3 class="dot-border mx-auto dot text-center ">Testimonials</h3>
@@ -439,28 +478,28 @@
         <section id="" class="numbers">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-3">
                         <div class="inner-number text-center">
                             <i class="fa-solid fa-users"></i>
                             <div class="num">850</div>
                             <p class="text-secondary fw-bold">Happy Customers</p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-3">
                         <div class="inner-number text-center">
                             <i class="fa-solid fa-thumbs-up"></i>
                             <div class="num">230</div>
                             <p class="text-secondary fw-bold">Complete Projects</p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-3">
                         <div class="inner-number text-center">
                             <i class="fa-solid fa-bullhorn"></i>
                             <div class="num">9450</div>
                             <p class="text-secondary fw-bold">Lines Of Code</p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-3">
                         <div class="inner-number text-center">
                             <i class="fa-solid fa-cloud-arrow-down"></i>
                             <div class="num">780</div>
@@ -478,7 +517,7 @@
             </header>
             <div class="container">
                 <div class="row gy-4 pt-5">
-                    <div class="col-md-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="inner-team">
                             <div class="team-image position-relative">
                                 <img class="w-100" src="./images/imgs/2.jpg" alt="product image">
@@ -493,9 +532,51 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="team-contant">
-                                <h4>John Doe</h4>
-                                <h5>Front-End Developer</h5>
+                            <div class="team-contant text-center p-4">
+                                    <h4 class="text-capitalize">John Doe</h4>
+                                    <h5 class="fw-bold text-uppercase">Front-End Developer</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="inner-team">
+                            <div class="team-image position-relative">
+                                <img class="w-100" src="./images/imgs/1.jpg" alt="product image">
+                                <div class="icons-container  "> 
+                                    <div class="icon-black ">
+                                        <ul class="list-unstyled d-flex gap-1">
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-contant text-center p-4">
+                                    <h4 class="text-capitalize">Dave Wood</h4>
+                                    <h5 class="fw-bold text-uppercase">Back-End Developer</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="inner-team">
+                            <div class="team-image position-relative">
+                                <img class="w-100" src="./images/imgs/2.jpg" alt="product image">
+                                <div class="icons-container  "> 
+                                    <div class="icon-black ">
+                                        <ul class="list-unstyled d-flex gap-1">
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-contant text-center p-4">
+                                    <h4 class="text-capitalize">John Doe</h4>
+                                    <h5 class="fw-bold text-uppercase">Front-End Developer</h5>
                             </div>
                         </div>
                     </div>
@@ -509,9 +590,37 @@
                     <h3 class="dot-border mx-auto dot text-center ">Contact us</h3>
                 </div>
             </header>
-            <div class="container"> </div>
                 <div class="contact-form mt-3">
-                    <form action="" class="d-flex flex-column gap-3" >
+                    <div class="row gy-3 mt-5">
+                        <div class="col-md-12 col-lg-4">
+                            <div class="contact-icons text-center">
+                                <div class="icon">
+                                    <i class="fa-solid fa-location-arrow"></i>
+                                </div>
+                                <h6 class="fw-bold">Address</h6>
+                                <p class="text-secondary">6834 Hollywood Blvd - Los Angeles CA</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-4">
+                            <div class="contact-icons text-center">
+                                <div class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <h6 class="fw-bold">Email</h6>
+                                <p class="text-secondary">Support@website.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-4">
+                            <div class="contact-icons text-center">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <h6 class="fw-bold">Address</h6>
+                                <p class="text-secondary">+20 010 2517 8918</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" class="d-flex flex-column gap-3 mt-5" >
                         <div class="f2-input d-flex row gy-3">
                             <div class="col-lg-6">
                                 <div>

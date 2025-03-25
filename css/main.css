@@ -17,7 +17,7 @@ a{
 }
 section
 {
-    padding: 50px 0 50px 0;
+    padding: 80px 0 80px 0;
 }
 
 div.title h3
@@ -31,7 +31,7 @@ div.title h3.dot-border::before
 {
     width: fit-content;
     position: absolute;
-    content: "..............................";
+    content: "................................";
     bottom: 0;
     color: #0000001f;
     font-size: 20px;
@@ -40,6 +40,7 @@ div.title h3.dot-border::before
 div.title h3
 {
     font-weight: 900;
+    width: fit-content;
 }
 div.title h3.dot::after
 {
@@ -48,6 +49,17 @@ div.title h3.dot::after
 
 }
 /* &------------------------navbar------------ */
+h1::after
+{
+    content: "";
+    width: fit-content;
+    height: 2px;
+    background: var(--color-white);
+}
+nav.default
+{
+    background: none;
+}
 header.home nav.navbar div.container a
 {
     color: white !important;
@@ -89,17 +101,13 @@ header.home h2::after
     animation: typing-animation 5s infinite steps(20) ;
 }
 @keyframes typing-animation {
-    /* Start with a blinking cursor */
     0%, 3% { content: "|"; }
 
-    /* Typing "Developer" */
     6% { content: "Developer|"; }
 
-    /* Pause before deleting */
     15% { content: "Developer"; }
     18% { content: "Developer|"; }
 
-    /* Erasing "Developer" */
     22% { content: "Develop|"; }
     25% { content: "Develo|"; }
     28% { content: "Devel|"; }
@@ -108,28 +116,22 @@ header.home h2::after
     37% { content: "De|"; }
     40% { content: "|"; }
 
-    /* Typing "Designer" */
     43% { content: "Designer|"; }
 
-    /* Pause before deleting */
     50% { content: "Designer"; }
     53% { content: "Designer|"; }
 
-    /* Erasing "Designer" */
     57% { content: "Design|"; }
     60% { content: "Desig|"; }
     63% { content: "Desi|"; }
     66% { content: "Des|"; }
     69% { content: "|"; }
 
-    /* Typing "Alaa Ewais" */
     72% { content: "Alaa Ewais|"; }
 
-    /* Pause before deleting */
     80% { content: "Alaa Ewais"; }
     83% { content: "Alaa Ewais|"; }
 
-    /* Erasing "Alaa Ewais" */
     87% { content: "Alaa Ewai|"; }
     90% { content: "Alaa Ewa|"; }
     93% { content: "Alaa Ew|"; }
@@ -151,6 +153,36 @@ header.home div.sc-icons ul li
     font-size: 14px;
     margin-top: 20px;
 }
+/* &------------------------------------About section------------------ */
+section.about div.about-img
+{
+    width: 430px;
+    margin-inline-start: auto;
+}
+section.about div.about-img img
+{
+    height: inherit;
+}
+section.about div.dots
+{
+    position: absolute;
+    z-index: -1;
+    width: 400px;
+    height: 400px;
+    background-image: url(../images/imgs/dots.png);
+    transform: translateY(-350px) translateX(-50px);
+}
+section.about div.about-contant button.contact-me-btn
+{
+    background: var(--color-white);
+    color: #1c1c1c;
+
+}
+section.about div.about-contant button.contact-me-btn:hover
+{
+    background-color: #1c1c1c;
+    color: var(--color-white);
+}
 /* & -----------------------------------Services------------------- */
 section.services div.inner-service 
 {
@@ -169,6 +201,21 @@ section.services div.inner-service .icon
     margin-inline: auto;
     background-color: var(--backgroungcolor);
     border-radius: 50%;
+}
+section.about span.precent-text
+{
+    position: absolute;
+    padding-left: 10px;
+    font-weight: 600;
+    text-align: start;
+}
+section.about span.prec-about
+{
+    text-align: end;
+}
+section.about div.container div.about-contant div.progress-bar
+{
+    background-color: #1c1c1c;
 }
 /* &----------------------------------------Work------------------------- */
 section.work div.container ul.nav-and-tabs
@@ -287,7 +334,56 @@ section.numbers div.container div.inner-number p
 {
     font-size: 15px;
 }
+/* &--------------------team section----------------------------- */
+section.team div.container div.inner-team div.team-image div.icons-container
+{
+    font-size: 15px;
+    transition: transform .8s ;
+    transform: scale(.5);
+}
+section.team div.container div.inner-team div.team-image
+{
+    overflow: hidden;
+}
+section.team div.container div.inner-team div.team-image img
+{
+    transition: transform .5s;
+}
+section.team div.container div.inner-team div.team-image:hover img
+{
+    transform: scale(1.2);
+}
+section.team div.container div.inner-team div.team-image:hover div.icons-container
+{
+    -webkit-transform: scale(1) rotateY(360deg);
+}
+section.team div.container div.team-contant
+{
+    background-color: rgba(52, 52, 52, .8);
+    color: white;
+    border-radius: 0 0 5px 5px;
+}
 /* & ------------------------------contact us section----------------------------------------- */
+section.contact div.contact-icons div.icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    color: #1c1c1c;
+    background-color: var(--backgroungcolor);
+    width: 35px; 
+    height: 35px;
+    border-radius: 50%; 
+    font-size: 20px;
+    padding: 25px;
+    margin-bottom: 5px;
+}
+section.contact div.contact-icons:hover div.icon
+{
+    color: var(--backgroungcolor);
+    background-color: #1c1c1c;
+}
 section.contact div.contact-form
 {
     width: 75%;
@@ -318,19 +414,15 @@ section.contact div.contact-form form .form-control
         flex-direction: column;
     } */
 }
-/* &--------------------section----------------------------- */
-section.team div.container div.inner-team div.team-image div.icons-container
-{
-    transform: translate(0);
-    font-size: 15px;
-    transition: transform 1s ;
-}
+
+
 section.team div.container div.inner-team div.team-image:hover div.icons-container
 {
     transform: rotateY('90');
     opacity: 1;
 }
-section.contact div.contact-form form button.btn-contact
+/* section.contact div.contact-form form  */
+button.btn-contact
 {
     background-color: #1c1c1c;
     color: var(--color-white);
@@ -340,7 +432,7 @@ section.contact div.contact-form form button.btn-contact
     font-size: 13px;
     transition: all .5s;
 }
-section.contact div.contact-form form button.btn-contact:hover
+button.btn-contact:hover
 {
     background-color: var(--color-white);
     color: #1c1c1c;
