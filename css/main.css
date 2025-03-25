@@ -49,13 +49,6 @@ div.title h3.dot::after
 
 }
 /* &------------------------navbar------------ */
-h1::after
-{
-    content: "";
-    width: fit-content;
-    height: 2px;
-    background: var(--color-white);
-}
 nav.default
 {
     background: none;
